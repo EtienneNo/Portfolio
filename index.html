@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Étienne Noël | Développeur d'applications</title>
+  <meta name="description" content="Portfolio de compétences – Développeur d'application" />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --primary: #38bdf8;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      padding: 4rem 2rem;
+      text-align: center;
+      background: linear-gradient(180deg, #020617, #0f172a);
+    }
+    header h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+    header p { max-width: 700px; margin: auto; color: var(--muted); }
+    nav {
+      position: sticky; top: 0;
+      background: rgba(15,23,42,0.9);
+      backdrop-filter: blur(6px);
+      display: flex; justify-content: center; gap: 2rem;
+      padding: 1rem;
+      z-index: 10;
+    }
+    nav a { color: var(--text); text-decoration: none; font-weight: 500; }
+    nav a:hover { color: var(--primary); }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 { font-size: 2rem; margin-bottom: 1rem; }
+    .card {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .tag {
+      display: inline-block;
+      background: #1e293b;
+      padding: 0.3rem 0.6rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      margin-right: 0.4rem;
+      margin-top: 0.4rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--muted);
+      border-top: 1px solid #1e293b;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div style="display:flex;flex-direction:column;align-items:center;gap:1.5rem;">
+    <div style="width:160px;height:160px;border-radius:50%;overflow:hidden;border:3px solid var(--primary);">
+      <!-- Remplacer src par le chemin de ta photo -->
+      <img src="assets/photo.png" alt="Photo" style="width:100%;height:100%;object-fit:cover;" />
+    </div>
+    <div>
+      <h1>Étienne Noël</h1>
+      <p>
+        Développeur d’applications – Java, Python, PHP, Flutter, TypeScript, C#, JavaScript<br />
+        BUT Informatique – Parcours <strong>Réalisation d’applications : conception, développement, validation</strong>
+      </p>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <a href="#apropos">À propos</a>
+  <a href="#competences">Compétences</a>
+  <a href="#projets">Projets</a>
+  <a href="#cv">CV</a>
+</nav>
+
+<section id="apropos">
+  <h2>À propos de moi</h2>
+  <div class="card">
+    <p>
+      Étudiant en BUT Informatique, je me spécialise dans le parcours <strong>Réalisation d’applications</strong>,
+      orienté vers la conception, le développement et la validation d’applications complexes.
+    </p>
+    <p>
+      J’ai progressivement acquis des compétences allant de l’analyse des besoins clients
+      jusqu’à la mise en œuvre de solutions complètes, maintenables et adaptées aux utilisateurs.
+    </p>
+  </div>
+</section>
+
+<section id="competences">
+  <h2>Compétences – Référentiel BUT Informatique</h2>
+
+  <div class="card">
+    <h3>Réaliser – Développer des applications informatiques</h3>
+    <p>
+      Recueillir et analyser les besoins d’un client, concevoir puis développer une application
+      complète répondant à un cahier des charges, tout en assurant sa maintenance et son évolution.
+    </p>
+    <ul>
+      <li><strong>Niveau 1 :</strong> développement d’applications simples, structuration du code</li>
+      <li><strong>Niveau 2 :</strong> passage des exigences à une application complète (MVC, DAO)</li>
+      <li><strong>Niveau 3 :</strong> adaptation multi-supports (desktop, mobile), amélioration continue</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Optimiser – Analyser et améliorer les performances</h3>
+    <p>
+      Choisir des algorithmes adaptés, analyser le comportement d’une application et
+      optimiser ses performances dans des contextes contraints.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Gérer – Données et sécurité</h3>
+    <p>
+      Concevoir des bases de données à partir des besoins clients, interagir avec celles-ci
+      via des applications et mettre en œuvre les notions de sécurité associées.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Collaborer – Travail en équipe et conduite de projet</h3>
+    <p>
+      S’intégrer dans une équipe informatique, suivre l’avancement d’un projet et
+      communiquer efficacement avec les différents acteurs.
+    </p>
+  </div>
+</section>
+
+<section id="projets">
+  <h2>Divers projets</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Application Java – Gestion de locataires</h3>
+      <p>
+        Application desktop développée en Java Swing permettant la gestion complète de locataires.
+        Le projet intègre une architecture MVC, un accès aux données via DAO et une base SQLite.
+      </p>
+      <div class="tag">Java</div>
+      <div class="tag">Swing</div>
+      <div class="tag">MVC</div>
+      <div class="tag">SQLite</div>
+    </div>
+
+    <div class="card">
+      <h3>Réseau social</h3>
+      <p>
+        Application mobile capable de s’adapter automatiquement à la langue du système,
+        avec une attention portée à l’ergonomie et à l’expérience utilisateur.
+      </p>
+      <div class="tag">TypeScript</div>
+      <div class="tag">Mobile</div>
+      <div class="tag">Tests</div>
+    </div>
+  </div>
+</section>
+
+<section id="personnel">
+  <h2>Au-delà de l’informatique</h2>
+  <div class="card">
+    <p>
+      En parallèle de mon parcours en informatique, je m’investis fortement dans le sport,
+      qui occupe une place centrale dans mon quotidien et contribue à mon équilibre,
+      à ma rigueur et à mon sens des responsabilités.
+    </p>
+    <ul>
+      <li>
+        <strong>Handball :</strong> pratiquant régulier et arbitre fédéral, je suis également
+        impliqué dans la formation et l’accompagnement des jeunes arbitres au sein de mon club,
+        ce qui me permet de développer des compétences en pédagogie, communication et prise de décision.
+      </li>
+      <li>
+        <strong>Sports d’endurance :</strong> pratique régulière du vélo, de la course à pied
+        et de la natation, avec une appétence particulière pour les défis de longue durée
+        (course sur route, trail, triathlon) et la fixation d’objectifs exigeants.
+      </li>
+      <li>
+        <strong>État d’esprit :</strong> goût de l’effort, discipline et persévérance,
+        que je cherche à appliquer aussi bien dans le sport que dans mes projets académiques
+        et professionnels.
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+<section id="cv">
+  <h2>Curriculum Vitae</h2>
+  <div class="card">
+    <p>
+      Retrouvez ici mes différentes versions de CV:
+    </p>
+    <ul>
+      <li><a href="assets/CV.pdf">CV à jour</a></li>
+    </ul>
+    <p>(Liens de téléchargement à ajouter)</p>
+  </div>
+</section>
+
+<footer>
+  <p>Portfolio personnel – Étienne Noël</p>
+</footer>
+
+</body>
+</html>
